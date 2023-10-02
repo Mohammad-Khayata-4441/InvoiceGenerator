@@ -1,0 +1,16 @@
+@media print {
+  body {
+    width: 8cm; /* Set the fixed width for printing */
+  }
+    /* Define the page width for printing */
+    @page {
+      size: 8cm 30cm; /* 8cm width and 11.7cm height (A4 paper size) */
+      width: 8cm;
+      margin: 0; /* No margins */
+    }
+
+    #template-container-publix{
+
+    }
+
+}

@@ -1,0 +1,41 @@
+@use '../assets/fonts/publix/rst-a2.scss';
+*{
+    box-sizing: border-box;
+}
+
+body.dark{
+  // background-color: theme('colors.backgroundDark.default');
+}
+
+ul{
+    list-style: none;
+}
+
+a{
+    text-decoration: none;
+}
+/* custom scrollbar */
+::-webkit-scrollbar {
+    width: 20px;
+  }
+  
+  ::-webkit-scrollbar-track {
+    background-color: transparent;
+  }
+  
+  ::-webkit-scrollbar-thumb {
+    background-color: #d6dee151;
+    border-radius: 20px;
+    border: 8px solid transparent;
+    background-clip: content-box;
+    cursor: pointer;
+  }
+  
+  ::-webkit-scrollbar-thumb:hover {
+    background-color: #a8bbbf;
+  }
+
+
+  p+p{
+    margin-top: 0 !important;
+  }
