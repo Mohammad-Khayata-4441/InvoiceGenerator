@@ -9,12 +9,12 @@ import { Product, ProductItem } from "@/shared/types/Product";
 import { useDispatch } from "react-redux";
 import { AppDispatch } from "@/store";
 import { setUserFormProducts } from "../templates/template.reducer";
+import { useNavigate } from "react-router-dom";
 
 export default function Home() {
-
+  const navigate = useNavigate()
   const dispatch = useDispatch<AppDispatch>()
 
-  const [products , setProducts] = useState<Product[]>([])
   const [isOpen, setIsOpenDialog] = useState(false)
   const setTemplateDialog = (templateName: string) => {
     setIsOpenDialog(true);
@@ -22,10 +22,11 @@ export default function Home() {
   }
   const printInvoice = () => {
 
-    const htmlContent = document.getElementById('template-container-publix')
+    navigate('/publix')
+    // const htmlContent = document.getElementById('template-container-publix')
 
 
-    const htmlString = `<html><body>${htmlContent?.outerHTML as string}</body></html>`
+    // const htmlString = `<html><body>${htmlContent?.outerHTML as string}</body></html>`
 
 
 
@@ -36,23 +37,23 @@ export default function Home() {
     // newWindow?.document.close();
 
     //   newWindow?.print(); 
-    const iframe = document.createElement("iframe");
-    if (htmlString && iframe) {
-      iframe.style.display = "none";
-      document.body.appendChild(iframe);
+    // const iframe = document.createElement("iframe");
+    // if (htmlString && iframe) {
+    //   iframe.style.display = "none";
+    //   document.body.appendChild(iframe);
 
-      const iframeDocument =
-        iframe.contentDocument || iframe.contentWindow?.document;
+    //   const iframeDocument =
+    //     iframe.contentDocument || iframe.contentWindow?.document;
 
-      iframeDocument?.open();
-      iframeDocument?.write(htmlString);
-      iframeDocument?.close();
+    //   iframeDocument?.open();
+    //   iframeDocument?.write(htmlString);
+    //   iframeDocument?.close();
 
-      iframe.onload = () => {
-        iframe.contentWindow?.print();
-        document.body.removeChild(iframe);
-      };
-    }
+    //   iframe.onload = () => {
+    //     iframe.contentWindow?.print();
+    //     document.body.removeChild(iframe);
+    //   };
+    // }
 
 
   }
