@@ -49,8 +49,8 @@ export default function PublixForm(props: Props) {
           <Typography variant='h6'>Products</Typography>
           <Box className='space-x-4'>
             <TextField sx={{ width: 100 }} value={fakeCount} onChange={(e) => dispatch(setFakeCount(Number(e.target.value)))} type='number' inputProps={{ max: 5 }} label='Count'></TextField>
-            <Button color='primary' onClick={() => dispatch(setFakedProducts(false))} endIcon={<FaRandom />} >Clear Random</Button>
-            <Button color='primary' onClick={() => !!fakeCount && dispatch(setFakedProducts(true))} endIcon={<FaRandom />} >Random</Button>
+            <Button color='primary' size='small' onClick={() => !!fakeCount && dispatch(setFakedProducts(true))} endIcon={<FaRandom />} >Random</Button>
+            <Button color='error' variant='outlined' size='small'  onClick={() => dispatch(setFakedProducts(false))} endIcon={<FaRandom />} >Clear Random</Button>
             <IconButton color='primary' onClick={() => setProducts((prevProducts) => ([...prevProducts, { ...initialProduct }]))}><Add /></IconButton>
           </Box>
         </Box>

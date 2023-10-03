@@ -64,20 +64,15 @@ export default function Home() {
   return (
     <Page
       title="Generate Invocie"
-      actions={
-        <Box>
-          <Button variant="contained" endIcon={<BsPlus />}>Generate Invoice</Button>
-        </Box>
-      }>
+        >
 
       <h5 className="my-2">Choose Your Template</h5>
 
 
       <div className="grid grid-cols-12" >
         <div className="col-span-12 md:col-span-6 lg:col-span-2 gap-4" >
-          <Paper onClick={() => setTemplateDialog('publix')}>
-            Template
-            {/* <img className="w-full max-" src={'/images/templates/publix/template.png'}></img> */}
+          <Paper onClick={() => setTemplateDialog('publix')} className="cursor-pointer hover:scale-105">
+            <img className="w-full max-" src={'/images/templates/publix/template.png'} ></img>
           </Paper>
         </div>
 
