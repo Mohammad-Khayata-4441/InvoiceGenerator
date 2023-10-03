@@ -23,7 +23,7 @@ export default function Home() {
   }
   const printInvoice = () => {
 
-    navigate('/p')
+    navigate('/publix')
     // const htmlContent = document.getElementById('template-container-publix')
 
 
