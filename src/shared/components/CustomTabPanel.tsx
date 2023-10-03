@@ -2,7 +2,7 @@ import Box from "@mui/material/Box";
 import PropTypes from "prop-types";
 import * as React from "react";
 
-function CustomTabPanel(props) {
+function CustomTabPanel(props:any) {
   const { children, value, index, ...other } = props;
 
   return (

@@ -1,7 +1,7 @@
 export interface LoginDto {
   passwd: string;
   username: string;
-  user_type
+  user_type:any
 }
 
 export interface LoginResponseDto {

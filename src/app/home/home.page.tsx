@@ -17,12 +17,13 @@ export default function Home() {
 
   const [isOpen, setIsOpenDialog] = useState(false)
   const setTemplateDialog = (templateName: string) => {
+    console.log(templateName)
     setIsOpenDialog(true);
 
   }
   const printInvoice = () => {
 
-    navigate('/publix')
+    navigate('/p')
     // const htmlContent = document.getElementById('template-container-publix')
 
 
